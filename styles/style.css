@@ -272,3 +272,250 @@ input[type="text"], footer input[type="email"], footer textarea{
 .f-main{
     max-width:1600px;
 }
+
+
+
+
+
+
+/* ================================================= */
+/* ============= RESPONSIVE STYLES ================= */
+/* ================================================= */
+
+/* For Tablets and Smaller Desktops (max-width: 1200px) */
+@media screen and (max-width: 1200px) {
+    .header {
+        /* Hide the developer image to simplify the layout, keep the background pattern */
+        background-image: url('../images/header_bg.png');
+        padding: 20px;
+    }
+
+    nav {
+        margin: 0 50px; /* Reduce nav margins */
+    }
+    .nav-title {
+        margin-left: 0; /* Remove the large left margin */
+    }
+
+    .banner {
+        margin: 0 30px; /* Reduce banner margins */
+        gap: 30px;
+    }
+    .banner-content {
+        width: 60%; /* Allow content to take relative width */
+        margin-left: 0; /* Remove fixed margin */
+        height: auto;
+    }
+    .banner-profile-pic {
+        width: 40%; /* Allow image to take relative width */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 0;
+    }
+    .banner-title {
+        font-size: 65px; /* Reduce font size */
+    }
+
+    .about {
+        max-width: 90%; /* Use percentage for width */
+        padding: 100px 50px; /* Reduce padding */
+    }
+
+    .skills, .resume {
+        max-width: 90%;
+    }
+
+    footer {
+        padding: 100px 50px; /* Reduce footer padding */
+    }
+}
+
+
+/* ======================================================= */
+/* =========== ADVANCED RESPONSIVE STYLES ============== */
+/* ======================================================= */
+
+/*
+  Breakpoint 1: Tablets & Small Desktops (Up to 1200px)
+  - Reduces large margins and adjusts the banner layout to be more compact.
+  - The layout remains horizontal but more fluid.
+*/
+@media screen and (max-width: 1200px) {
+    .header {
+        /* Remove the developer image to avoid awkward overlap on smaller screens */
+        background-image: url('../images/header_bg.png');
+        background-position: bottom right;
+        max-height: none; /* Allow height to be determined by content */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    nav {
+        margin: 0 40px; /* Reduce side margins */
+    }
+
+    .nav-title {
+        margin-left: 0; /* Critical: Reset the large desktop margin */
+    }
+
+    .banner {
+        margin: 0 40px; /* Match nav margin for alignment */
+        gap: 30px;
+    }
+
+    .banner-content {
+        width: 55%; /* Allow content to take a percentage of the space */
+        height: auto;
+        margin-left: 0; /* Critical: Reset the large desktop margin */
+    }
+
+    .banner-profile-pic {
+        width: 45%; /* Image takes the remaining space */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 0;
+    }
+
+    .banner-title {
+        font-size: 65px; /* Scale down the main title */
+    }
+
+    .about {
+        margin-left: auto; /* Center the about section */
+        margin-right: auto;
+        padding: 100px 60px;
+        max-width: 90%;
+    }
+    
+    .skill-container, .resume-container {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        /* Allow items to wrap onto the next line if they don't fit */
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    footer {
+        padding: 100px 40px;
+    }
+}
+
+
+/*
+  Breakpoint 2: Mobile Devices (Up to 768px)
+  - Stacks all major layout components vertically.
+  - Significantly reduces font sizes and spacing for readability on small screens.
+  - Re-orders the banner for a mobile-first feel (image on top).
+*/
+@media screen and (max-width: 768px) {
+    /* --- 1. Vertical Stacking & Layout Reset --- */
+    nav,
+    nav ul,
+    .banner,
+    .about-items,
+    .skill-container,
+    .resume-container,
+    footer {
+        flex-direction: column; /* The most important change: stack everything */
+    }
+
+    /* --- 2. Header, Navigation, and Banner Redesign --- */
+    .header {
+        padding: 30px 0; /* Vertical padding, no side padding on the container */
+    }
+
+    nav {
+        margin: 0 auto; /* Center the navigation block */
+        gap: 25px; /* Space between title and ul */
+    }
+    
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li {
+        margin-right: 0; /* Remove horizontal spacing */
+    }
+
+    .banner {
+        margin: 0 20px; /* Add side spacing for banner content */
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .banner-content {
+        width: 100%;
+        order: 2; /* Content appears AFTER the image */
+    }
+    
+    .banner-profile-pic {
+        width: 75%; /* Make the image large but not full-width */
+        max-width: 350px; /* Prevent image from being too large */
+        order: 1; /* Image appears BEFORE the content */
+    }
+
+    /* --- 3. Font & Button Scaling --- */
+    .banner-greetings {
+        font-size: 38px;
+    }
+    .banner-title {
+        font-size: 50px;
+    }
+    .banner-description {
+        font-size: 16px;
+    }
+    .btn-primary {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+    /* --- 4. Main Content Sections --- */
+    main section {
+        margin-top: 80px;
+        margin-bottom: 0px;
+    }
+
+    .about {
+        padding: 50px 20px;
+        max-height: none;
+    }
+
+    .about-items {
+        gap: 40px;
+    }
+    
+    .skill-container {
+        margin-top: 50px;
+    }
+
+    .skill, .experience {
+        width: 100%; /* Make each item take full width */
+        height: auto;
+        box-sizing: border-box; /* Ensures padding is calculated correctly */
+    }
+
+    .resume-container {
+        gap: 60px;
+        align-items: stretch; /* Make columns equal height if needed */
+    }
+    
+    .experience-description {
+        width: auto;
+        height: auto;
+    }
+
+    .btn-cv {
+        margin-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    /* --- 5. Footer Redesign --- */
+    footer {
+        padding: 80px 20px;
+        gap: 60px;
+    }
+    
+    .footer-column {
+        width: 100%;
+        text-align: center;
+    }
+}
