@@ -29,6 +29,29 @@
     border-radius: 5px;
 
 }
+
+
+.section-title{
+    font-size: 35px;
+    font-weight: bold;
+    color: 181818;
+}
+
+.section-description{
+    font-size: 18px;
+    color: #757575;
+
+}
+
+.secondary-bg{
+    background-color:#FFF8F3 ;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
 /* Nav style start................
 ................................. */
 
@@ -75,6 +98,10 @@ nav ul{
     background-repeat:no-repeat;
     /* margin:38px 25px 0px 23px ; */
     background-position:top left, bottom right;
+    background-color: #FFF8F3;
+    padding: 5px;
+    max-width: 2100px;
+    max-height: 837px;
 }
 
 .banner{
@@ -108,4 +135,65 @@ nav ul{
     height: 676px;
     width:584px;
     margin-right: 38px;
+}
+
+/* about-style.............
+........................... */
+
+main section{
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+.about{
+    border-radius:10px ;
+    margin-top: 130px;
+    margin-left: 230px;
+    padding: 131px 155px;
+    text-align:center;
+     max-width: 1140px;
+    max-height: 550px;
+}
+
+/* about description */
+.about-items{
+    display: flex;
+    justify-content: space-around;
+    margin-top:30px ;
+}
+.item-description{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.item-title{
+    font-size: 20px;
+    color:#757575;
+}
+
+/* Skill Section Start...........
+................................ */
+.skills{
+     max-width: 2100px;
+    max-height: 837px;
+}
+
+.skill{
+    padding: 30px;
+    box-shadow: 0px 6px 10px 0px rgba(0,0,0,06);
+    border-radius: 5px; 
+    height:377px;
+    width: 267px;
+    margin: 0 auto;
+   
+}
+.skill-container{
+    display: flex;
+    gap:24px;
+     max-width: 2100px;
+    max-height: 837px;
+    margin-top: 130px;
+}
+
+.skill-description{
+    
 }
