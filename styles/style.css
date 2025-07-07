@@ -197,3 +197,51 @@ main section{
 .skill-description{
     
 }
+
+/* Resume section style..........
+.............................. */
+.resume{
+    max-height: 837px;
+    margin-top: 130px;
+}
+.resume-container{
+    display: flex;
+    gap:35px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.experience-sub-title{
+    font-size: 20px;
+    font-weight:600 ;
+    margin: 10px 5px 10px 0px;
+}
+
+.experience-description{
+    width: 511px;
+    height: 84px;
+}
+.experience-description, .experience-sub-title{
+    color: #757575;
+
+}
+
+.resume hr{
+    margin: 30px 5px;
+}
+
+.section-title{
+    text-align: center;
+}
+.experience{
+    width: 511px;
+    height: 175px;
+
+}
+/* ............................. */
+
+/* .................................. */
+.btn-cv{
+    text-align: center;
+    margin-top:70px;
+}
